@@ -25,7 +25,7 @@ class FizzBuzzTest {
         Random random = new Random();
         int max = random.nextInt(0, 1000) * 3;
         String[] res = FizzBuzz.shout(max);
-        assertEquals("fizz", res[max - 1]);
+        assertTrue(res[max - 1].startsWith("fizz"));
     }
 
     @Test
@@ -39,7 +39,7 @@ class FizzBuzzTest {
         Random random = new Random();
         int max = random.nextInt(0, 1000) * 5;
         String[] res = FizzBuzz.shout(max);
-        assertEquals("buzz", res[max - 1]);
+        assertTrue(res[max - 1].endsWith("buzz"));
     }
 
     @Test
