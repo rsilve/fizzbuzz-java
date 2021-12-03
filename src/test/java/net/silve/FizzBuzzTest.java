@@ -23,7 +23,7 @@ class FizzBuzzTest {
     @Test
     void shouldFizzForNx3() {
         Random random = new Random();
-        int max = random.nextInt(0, 1000) * 3;
+        int max = random.nextInt(1000) * 3;
         String[] res = FizzBuzz.shout(max);
         assertTrue(res[max - 1].startsWith("fizz"));
     }
@@ -37,7 +37,7 @@ class FizzBuzzTest {
     @Test
     void shouldBuzzForNx5() {
         Random random = new Random();
-        int max = random.nextInt(0, 1000) * 5;
+        int max = random.nextInt(1000) * 5;
         String[] res = FizzBuzz.shout(max);
         assertTrue(res[max - 1].endsWith("buzz"));
     }
@@ -45,7 +45,7 @@ class FizzBuzzTest {
     @Test
     void shouldFizzBuzzForNx5x3() {
         Random random = new Random();
-        int max = random.nextInt(0, 1000) * 5 * 3;
+        int max = random.nextInt(1000) * 5 * 3;
         String[] res = FizzBuzz.shout(max);
         assertEquals("fizzbuzz", res[max - 1]);
     }
